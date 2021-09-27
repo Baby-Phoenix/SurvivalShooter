@@ -575,6 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678117670}
   - component: {fileID: 678117671}
+  - component: {fileID: 678117672}
   m_Layer: 0
   m_Name: Agent6
   m_TagString: Enemy
@@ -611,6 +612,14 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!33 &678117672
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678117669}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &685812060
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689285334}
   - component: {fileID: 689285335}
+  - component: {fileID: 689285336}
   m_Layer: 0
   m_Name: Agent7
   m_TagString: Enemy
@@ -687,6 +697,14 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!33 &689285336
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689285333}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &736971048
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736971049}
   - component: {fileID: 736971050}
+  - component: {fileID: 736971051}
   m_Layer: 0
   m_Name: Agent5
   m_TagString: Enemy
@@ -733,6 +752,14 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!33 &736971051
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736971048}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &839330334
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900695708}
   - component: {fileID: 900695709}
+  - component: {fileID: 900695710}
   m_Layer: 0
   m_Name: Agent2
   m_TagString: Enemy
@@ -896,6 +924,14 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!33 &900695710
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900695707}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &996049654
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 738646681744756156, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 738646681744756156, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1188,6 +1224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193044134}
   - component: {fileID: 1193044135}
+  - component: {fileID: 1193044136}
   m_Layer: 0
   m_Name: Agent3
   m_TagString: Enemy
@@ -1224,6 +1261,14 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!33 &1193044136
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193044133}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1202691861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1471,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1506396332}
-  - component: {fileID: 1506396333}
   m_Layer: 0
   m_Name: Agent1
   m_TagString: Enemy
@@ -1449,20 +1493,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1506396333
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506396331}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.35
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1532972405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2033,7 @@ Transform:
   - {fileID: 1453357948}
   - {fileID: 643210494}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914383806
 GameObject:
@@ -2064,6 +2094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2042910503}
   - component: {fileID: 2042910504}
+  - component: {fileID: 2042910505}
   m_Layer: 0
   m_Name: Agent4
   m_TagString: Enemy
@@ -2100,6 +2131,14 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!33 &2042910505
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042910502}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2120266466
 GameObject:
   m_ObjectHideFlags: 0
@@ -4240,9 +4279,10 @@ GameObject:
   - component: {fileID: 5866666021238488939}
   - component: {fileID: 919132148752695213}
   - component: {fileID: 919132148752695212}
+  - component: {fileID: 919132148752695214}
   m_Layer: 0
   m_Name: copzombie_l_actisdato
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4281,7 +4321,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5.5
+  m_Speed: 1.56
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -4293,6 +4333,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &919132148752695214
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148752695211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &919132149279562190
 GameObject:
   m_ObjectHideFlags: 0
