@@ -9,4 +9,18 @@ public class BulletDestroy : MonoBehaviour
     {
         Destroy (gameObject, 1.5f);
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Destroy(col.gameObject);
+        }
+    }
 }
