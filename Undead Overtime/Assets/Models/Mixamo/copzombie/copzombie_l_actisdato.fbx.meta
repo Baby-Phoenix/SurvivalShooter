@@ -855,7 +855,7 @@ ModelImporter:
     - name: RightHandThumb1
       parentName: RightHand
       position: {x: 0.07147972, y: -0.04026058, z: 0.039051794}
-      rotation: {x: -0.11873817, y: -0.08688068, z: 0.11877657, w: 0.9819598}
+      rotation: {x: -0.118738174, y: -0.08688068, z: 0.118776575, w: 0.9819598}
       scale: {x: 1, y: 1, z: 1}
     - name: RightHandThumb2
       parentName: RightHandThumb1

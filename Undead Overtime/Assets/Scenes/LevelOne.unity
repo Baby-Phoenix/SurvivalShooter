@@ -249,12 +249,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133086208}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c717d4bf5e74a548a51bf77f70c3681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaypointNetwork: {fileID: 928426358}
+  WaypointNetwork: {fileID: 937962329}
   CurrentIndex: 0
   HasPath: 0
   PathPending: 0
@@ -275,12 +275,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 133086208}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.56
+  m_Radius: 0.38
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.84
+  m_StoppingDistance: 1.05
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -288,6 +288,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &133086213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133086208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af60f9d2504d14943bbb5a07df6dbde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &169600877
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +576,10 @@ PrefabInstance:
     - target: {fileID: 738646681763345176, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975293101822555576, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7374558844359882448, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
       propertyPath: m_LocalScale.x
@@ -949,22 +965,7 @@ MonoBehaviour:
   UIStart: 0
   UIEnd: 0
   Waypoints:
-  - {fileID: 1992444005}
-  - {fileID: 985667088}
-  - {fileID: 1470805845}
-  - {fileID: 1384514951}
-  - {fileID: 1841803920}
-  - {fileID: 1274755806}
-  - {fileID: 1014074599}
-  - {fileID: 1629636888}
-  - {fileID: 1822675310}
-  - {fileID: 1266797647}
-  - {fileID: 857861170}
-  - {fileID: 129122464}
-  - {fileID: 2056530447}
-  - {fileID: 169600878}
-  - {fileID: 344017241}
-  - {fileID: 2111720951}
+  - {fileID: 1123384444}
 --- !u!1 &985667087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1173,11 @@ MonoBehaviour:
   - {fileID: 169600878}
   - {fileID: 344017241}
   - {fileID: 2111720951}
+--- !u!4 &1123384444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7374558844359882448, guid: 573ac53c334415945bf239de2c2f0511, type: 3}
+  m_PrefabInstance: {fileID: 578565196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1263179472
 GameObject:
   m_ObjectHideFlags: 0
