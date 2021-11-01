@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    public int health = 100;
+
 #if ENABLE_INPUT_SYSTEM
     InputAction movement;
     InputAction jump;

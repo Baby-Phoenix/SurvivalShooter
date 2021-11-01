@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         int turnOnSpot;
+        
 
         Vector3 cross = Vector3.Cross(transform.forward, agent.desiredVelocity.normalized);
         float horizontal = (cross.y < 0) ? -cross.magnitude : cross.magnitude;
@@ -64,4 +66,5 @@ public class EnemyAI : MonoBehaviour
             anim.SetBool("isAttacking", true);
         }
     }
+
 }
