@@ -12,4 +12,16 @@ public class HealthBar : MonoBehaviour
     {
         slider.value = health;
     }
+
+    public void Decrease()
+    {
+        slider.value--;
+    }
+
+    public void Increase()
+    {
+        slider.value++;
+    }
+
+
 }

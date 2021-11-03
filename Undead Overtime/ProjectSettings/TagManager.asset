@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HandCollider
   - HealthBar
+  - Hand
   layers:
   - Default
   - TransparentFX

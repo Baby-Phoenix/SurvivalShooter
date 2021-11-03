@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
     Animator anim;
+    int health = 10;
 
     private float _originalMaxSpeed = 0;
 
@@ -17,6 +18,8 @@ public class EnemyAI : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        health = 10;
+
 
         if (agent)
             _originalMaxSpeed = agent.speed;

@@ -8,24 +8,23 @@ public class EnemyHitting : MonoBehaviour
     public Transform target;
 
 
-    private void Update()
+
+
+    private void OnCollisionEnter(Collision collision)
     {
 
-
-        float distance = Vector3.Distance(transform.position, target.position);
-
-        if (EnemyAnim.GetCurrentAnimatorStateInfo(1).IsName("Attack"))
+        if (collision.gameObject.tag == "Player")
         {
-            if (distance < 3) 
-            { 
-                //Debug.Log("Hand hitting body");
-                int tempHealth = GameObject.Find("PlayerControllerFPS").GetComponent<PlayerMovement>().health--;
-                GameObject.Find("HealthBar").GetComponent<HealthBar>().SetHealth(tempHealth);
+            Debug.Log("Hand touching player");
+            if (EnemyAnim.GetCurrentAnimatorStateInfo(1).IsName("Attack"))
+            {
+                    Debug.Log("Hand hitting body");
+                    int tempHealth = GameObject.Find("PlayerControllerFPS").GetComponent<PlayerMovement>().health--;
+                    GameObject.Find("HealthBar").GetComponent<HealthBar>().SetHealth(tempHealth);
 
+                    Debug.Log(GameObject.Find("HealthBar").GetComponent<HealthBar>().slider.value);
+                
             }
-           
-            
-
         }
     }
        
