@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour
 {
     Transform target;
     NavMeshAgent agent;
     Animator anim;
-    int health = 10;
 
     private float _originalMaxSpeed = 0;
 
@@ -18,8 +16,6 @@ public class EnemyAI : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        health = 10;
-
 
         if (agent)
             _originalMaxSpeed = agent.speed;
@@ -55,13 +51,11 @@ public class EnemyAI : MonoBehaviour
 
         if(distance > 3)
         {
-            //if (!anim.GetCurrentAnimatorStateInfo(0).IsName("isAttacking"))
             {
                 agent.updatePosition = true;
                 agent.SetDestination(target.position);
             }
             anim.SetBool("isAttacking", false);
-
         }
         else
         {
@@ -69,5 +63,4 @@ public class EnemyAI : MonoBehaviour
             anim.SetBool("isAttacking", true);
         }
     }
-
 }
