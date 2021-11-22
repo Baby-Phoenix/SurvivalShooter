@@ -6,8 +6,7 @@ public class EnemyHitting : MonoBehaviour
 {
     public Animator EnemyAnim;
     public Transform target;
-
-
+    public GameObject PlayerHealth;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -18,9 +17,12 @@ public class EnemyHitting : MonoBehaviour
             Debug.Log("Hand touching player");
             if (EnemyAnim.GetCurrentAnimatorStateInfo(1).IsName("Attack"))
             {
+                
                     Debug.Log("Hand hitting body");
-                    int tempHealth = GameObject.Find("PlayerControllerFPS").GetComponent<PlayerMovement>().health--;
-                    GameObject.Find("HealthBar").GetComponent<HealthBar>().SetHealth(tempHealth);
+
+
+                    PlayerHealth.GetComponent<PlayerMovement>().health -= 5;
+                    GameObject.Find("HealthBar").GetComponent<HealthBar>().SetHealth(PlayerHealth.GetComponent<PlayerMovement>().health);
 
                     Debug.Log(GameObject.Find("HealthBar").GetComponent<HealthBar>().slider.value);
                 
