@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 2f;
     public LayerMask groundMask;
 
+    [SerializeField] Joystick joystickLeft;
+    private float camAngle = 0;
 
     Vector3 velocity;
     bool isGrounded;
@@ -54,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        JoyStickMovement();
         float x;
         float z;
         bool jumpPressed = false;
@@ -93,5 +97,17 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
+    }
+
+    private void JoyStickMovement()
+    {
+        float horizontal = joystickLeft.Horizontal;
+        float vertical = joystickLeft.Vertical;
+
+        Vector3 push = transform.right * horizontal + transform.forward * vertical;
+
+        controller.Move(push * speed * Time.deltaTime);
+
+
     }
 }

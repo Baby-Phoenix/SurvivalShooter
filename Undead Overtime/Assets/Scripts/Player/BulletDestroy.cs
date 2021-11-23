@@ -17,12 +17,10 @@ public class BulletDestroy : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            
             Destroy(col.gameObject);
-
-            spawner.enemiesKilled++;
-
-            Destroy(gameObject);
+            spawner.enemiesKilled++;  
         }
+
+        Destroy(gameObject);
     }
 }

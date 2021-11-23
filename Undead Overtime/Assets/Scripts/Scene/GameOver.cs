@@ -6,7 +6,6 @@ public class GameOver : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void RestartGame()

@@ -8,49 +8,32 @@ using UnityEngine;
 
 public class LookWithMouse : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+
+    [SerializeField] Joystick joystickRight;
 
     public Transform playerBody;
 
     float xRotation = 0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Cursor.lockState = CursorLockMode.Locked;
-    }
-
     // Update is called once per frame
     void Update()
     {
-#if ENABLE_INPUT_SYSTEM
-        float mouseX = 0, mouseY = 0;
+        JoyStickCamera();
+    }
 
-        if (Mouse.current != null)
-        {
-            var delta = Mouse.current.delta.ReadValue() / 15.0f;
-            mouseX += delta.x;
-            mouseY += delta.y;
-        }
-        if (Gamepad.current != null)
-        {
-            var value = Gamepad.current.rightStick.ReadValue() * 2;
-            mouseX += value.x;
-            mouseY += value.y;
-        }
+    private void JoyStickCamera()
+    {
+        float horizontal = joystickRight.Horizontal * 50f;
+        float vertical = joystickRight.Vertical * 50f;
 
-        mouseX *= mouseSensitivity * Time.deltaTime;
-        mouseY *= mouseSensitivity * Time.deltaTime;
-#else
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-#endif
+        horizontal *= Time.deltaTime;
+        vertical *= Time.deltaTime;
 
-        xRotation -= mouseY;
+        xRotation -= vertical;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * horizontal);
 
-        playerBody.Rotate(Vector3.up * mouseX);
     }
 }

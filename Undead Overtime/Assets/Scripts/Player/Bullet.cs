@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour
     public Transform barrelEnd;
 
     // Update is called once per frame
-    void Update()
+  public void Shoot()
     {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            Rigidbody bulletInstance;
+           Rigidbody bulletInstance;
             bulletInstance = Instantiate(bulletPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             bulletInstance.AddForce(barrelEnd.forward * 5000);
-        }
+        
     }
+
+
 }
