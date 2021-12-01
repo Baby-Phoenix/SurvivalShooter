@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
         movement.Enable();
         jump.Enable();
+        FindObjectOfType<AudioManager>().Play("BGM");
     }
 
 #endif

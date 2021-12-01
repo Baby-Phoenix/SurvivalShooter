@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletDestroy : MonoBehaviour
 {
     EnemySpawner spawner;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +17,9 @@ public class BulletDestroy : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             Destroy(col.gameObject);
-            spawner.enemiesKilled++;  
+            spawner.enemiesKilled++;
+            FindObjectOfType<Score>().score++;
         }
-
         Destroy(gameObject);
     }
 }

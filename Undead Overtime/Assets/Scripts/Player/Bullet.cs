@@ -10,10 +10,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
   public void Shoot()
     {
-           Rigidbody bulletInstance;
+        FindObjectOfType<AudioManager>().Play("GUN");
+        Rigidbody bulletInstance;
             bulletInstance = Instantiate(bulletPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
             bulletInstance.AddForce(barrelEnd.forward * 5000);
-        
     }
 
 
