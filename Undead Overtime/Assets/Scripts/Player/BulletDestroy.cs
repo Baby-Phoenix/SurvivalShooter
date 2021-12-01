@@ -16,11 +16,10 @@ public class BulletDestroy : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            int enemiesLeft = FindObjectOfType<EnemiesAlive>().enemiesAlive;
 
             Destroy(col.gameObject);
             spawner.enemiesKilled++;
-            FindObjectOfType<EnemiesAlive>().enemiesAlive = enemiesLeft - spawner.enemiesKilled;
+            FindObjectOfType<EnemiesAlive>().enemiesAlive--;
             FindObjectOfType<Score>().score++;
         }
         Destroy(gameObject);

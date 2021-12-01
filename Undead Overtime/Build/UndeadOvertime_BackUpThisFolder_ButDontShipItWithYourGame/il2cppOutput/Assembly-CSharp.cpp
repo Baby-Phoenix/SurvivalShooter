@@ -7035,9 +7035,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_NextWave_m5654A2BF6A022F5B4
 		// waveNumber++;
 		int32_t L_0 = __this->___waveNumber_4;
 		__this->___waveNumber_4 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		// numberOfEnemiesSpawned += 10;
+		// numberOfEnemiesSpawned += 5;
 		int32_t L_1 = __this->___numberOfEnemiesSpawned_5;
-		__this->___numberOfEnemiesSpawned_5 = ((int32_t)il2cpp_codegen_add(L_1, ((int32_t)10)));
+		__this->___numberOfEnemiesSpawned_5 = ((int32_t)il2cpp_codegen_add(L_1, 5));
 		// enemiesKilled = 0;
 		__this->___enemiesKilled_6 = 0;
 		// FindObjectOfType<EnemiesAlive>().enemiesAlive = numberOfEnemiesSpawned;
@@ -7049,10 +7049,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_NextWave_m5654A2BF6A022F5B4
 		L_2->___enemiesAlive_4 = L_3;
 		// for (int i = 0; i < numberOfEnemiesSpawned; i++)
 		V_0 = 0;
-		goto IL_0042;
+		goto IL_0041;
 	}
 
-IL_0038:
+IL_0037:
 	{
 		// SpawnEnemy();
 		EnemySpawner_SpawnEnemy_m3ECE5A636D85AD547F695DFCCA87F3C021BB6599(__this, NULL);
@@ -7061,14 +7061,14 @@ IL_0038:
 		V_0 = ((int32_t)il2cpp_codegen_add(L_4, 1));
 	}
 
-IL_0042:
+IL_0041:
 	{
 		// for (int i = 0; i < numberOfEnemiesSpawned; i++)
 		int32_t L_5 = V_0;
 		int32_t L_6 = __this->___numberOfEnemiesSpawned_5;
 		if ((((int32_t)L_5) < ((int32_t)L_6)))
 		{
-			goto IL_0038;
+			goto IL_0037;
 		}
 	}
 	{
@@ -8115,7 +8115,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BulletDestroy_OnCollisionEnter_m3288A512
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3260331AF5DA53ABC7CA7BAF659CF8D9FC93DEC7);
 		s_Il2CppMethodInitialized = true;
 	}
-	int32_t V_0 = 0;
 	{
 		// if (col.gameObject.tag == "Enemy")
 		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_0 = ___col0;
@@ -8129,56 +8128,49 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BulletDestroy_OnCollisionEnter_m3288A512
 		L_3 = String_op_Equality_m0D685A924E5CD78078F248ED1726DA5A9D7D6AC0(L_2, _stringLiteral3260331AF5DA53ABC7CA7BAF659CF8D9FC93DEC7, NULL);
 		if (!L_3)
 		{
-			goto IL_0069;
+			goto IL_0059;
 		}
 	}
 	{
-		// int enemiesLeft = FindObjectOfType<EnemiesAlive>().enemiesAlive;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		EnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5* L_4;
-		L_4 = Object_FindObjectOfType_TisEnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5_m972CD3906E13B24B89021845EB17DD3EAE763EF6(Object_FindObjectOfType_TisEnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5_m972CD3906E13B24B89021845EB17DD3EAE763EF6_RuntimeMethod_var);
-		NullCheck(L_4);
-		int32_t L_5 = L_4->___enemiesAlive_4;
-		V_0 = L_5;
 		// Destroy(col.gameObject);
-		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_6 = ___col0;
-		NullCheck(L_6);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
-		L_7 = Collision_get_gameObject_m846FADBCA43E1849D3FE4D5EA44C02D055A70B3E(L_6, NULL);
-		Object_Destroy_mFCDAE6333522488F60597AF019EA90BB1207A5AA(L_7, NULL);
+		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_4 = ___col0;
+		NullCheck(L_4);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
+		L_5 = Collision_get_gameObject_m846FADBCA43E1849D3FE4D5EA44C02D055A70B3E(L_4, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_Destroy_mFCDAE6333522488F60597AF019EA90BB1207A5AA(L_5, NULL);
 		// spawner.enemiesKilled++;
-		EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* L_8 = __this->___spawner_4;
-		EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* L_9 = L_8;
-		NullCheck(L_9);
-		int32_t L_10 = L_9->___enemiesKilled_6;
-		NullCheck(L_9);
-		L_9->___enemiesKilled_6 = ((int32_t)il2cpp_codegen_add(L_10, 1));
-		// FindObjectOfType<EnemiesAlive>().enemiesAlive = enemiesLeft - spawner.enemiesKilled;
-		EnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5* L_11;
-		L_11 = Object_FindObjectOfType_TisEnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5_m972CD3906E13B24B89021845EB17DD3EAE763EF6(Object_FindObjectOfType_TisEnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5_m972CD3906E13B24B89021845EB17DD3EAE763EF6_RuntimeMethod_var);
-		int32_t L_12 = V_0;
-		EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* L_13 = __this->___spawner_4;
-		NullCheck(L_13);
-		int32_t L_14 = L_13->___enemiesKilled_6;
-		NullCheck(L_11);
-		L_11->___enemiesAlive_4 = ((int32_t)il2cpp_codegen_subtract(L_12, L_14));
+		EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* L_6 = __this->___spawner_4;
+		EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* L_7 = L_6;
+		NullCheck(L_7);
+		int32_t L_8 = L_7->___enemiesKilled_6;
+		NullCheck(L_7);
+		L_7->___enemiesKilled_6 = ((int32_t)il2cpp_codegen_add(L_8, 1));
+		// FindObjectOfType<EnemiesAlive>().enemiesAlive--;
+		EnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5* L_9;
+		L_9 = Object_FindObjectOfType_TisEnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5_m972CD3906E13B24B89021845EB17DD3EAE763EF6(Object_FindObjectOfType_TisEnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5_m972CD3906E13B24B89021845EB17DD3EAE763EF6_RuntimeMethod_var);
+		EnemiesAlive_t46C9695971536382AF5206BBC0CE30FAE67526D5* L_10 = L_9;
+		NullCheck(L_10);
+		int32_t L_11 = L_10->___enemiesAlive_4;
+		NullCheck(L_10);
+		L_10->___enemiesAlive_4 = ((int32_t)il2cpp_codegen_subtract(L_11, 1));
 		// FindObjectOfType<Score>().score++;
-		Score_t190877D354724EB1BD99FA27F906E19CB8F0C88A* L_15;
-		L_15 = Object_FindObjectOfType_TisScore_t190877D354724EB1BD99FA27F906E19CB8F0C88A_mCB31EA643921469158EF651EE2693698CF66DE12(Object_FindObjectOfType_TisScore_t190877D354724EB1BD99FA27F906E19CB8F0C88A_mCB31EA643921469158EF651EE2693698CF66DE12_RuntimeMethod_var);
-		Score_t190877D354724EB1BD99FA27F906E19CB8F0C88A* L_16 = L_15;
-		NullCheck(L_16);
-		int32_t L_17 = L_16->___score_4;
-		NullCheck(L_16);
-		L_16->___score_4 = ((int32_t)il2cpp_codegen_add(L_17, 1));
+		Score_t190877D354724EB1BD99FA27F906E19CB8F0C88A* L_12;
+		L_12 = Object_FindObjectOfType_TisScore_t190877D354724EB1BD99FA27F906E19CB8F0C88A_mCB31EA643921469158EF651EE2693698CF66DE12(Object_FindObjectOfType_TisScore_t190877D354724EB1BD99FA27F906E19CB8F0C88A_mCB31EA643921469158EF651EE2693698CF66DE12_RuntimeMethod_var);
+		Score_t190877D354724EB1BD99FA27F906E19CB8F0C88A* L_13 = L_12;
+		NullCheck(L_13);
+		int32_t L_14 = L_13->___score_4;
+		NullCheck(L_13);
+		L_13->___score_4 = ((int32_t)il2cpp_codegen_add(L_14, 1));
 	}
 
-IL_0069:
+IL_0059:
 	{
 		// Destroy(gameObject);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18;
-		L_18 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
+		L_15 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_Destroy_mFCDAE6333522488F60597AF019EA90BB1207A5AA(L_18, NULL);
+		Object_Destroy_mFCDAE6333522488F60597AF019EA90BB1207A5AA(L_15, NULL);
 		// }
 		return;
 	}

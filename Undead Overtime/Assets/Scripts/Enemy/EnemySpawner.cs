@@ -60,7 +60,7 @@ public class EnemySpawner : MonoBehaviour
     public void NextWave()
     {
         waveNumber++;
-        numberOfEnemiesSpawned += 10;
+        numberOfEnemiesSpawned += 5;
         enemiesKilled = 0;
 
         FindObjectOfType<EnemiesAlive>().enemiesAlive = numberOfEnemiesSpawned;
