@@ -23,8 +23,8 @@ public class LookWithMouse : MonoBehaviour
 
     private void JoyStickCamera()
     {
-        float horizontal = joystickRight.Horizontal * 50f;
-        float vertical = joystickRight.Vertical * 50f;
+        float horizontal = joystickRight.Horizontal * 100f;
+        float vertical = joystickRight.Vertical * 100f;
 
         horizontal *= Time.deltaTime;
         vertical *= Time.deltaTime;

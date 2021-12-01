@@ -46,10 +46,12 @@ public class EnemySpawner : MonoBehaviour
     private void StartWave()
     {
         waveNumber = 1;
-        numberOfEnemiesSpawned = 2;
+        numberOfEnemiesSpawned = 5;
         enemiesKilled = 0;
 
-        for(int i = 0; i < numberOfEnemiesSpawned; i++)
+        FindObjectOfType<EnemiesAlive>().enemiesAlive = numberOfEnemiesSpawned;
+
+        for (int i = 0; i < numberOfEnemiesSpawned; i++)
         {
             SpawnEnemy();
         }
@@ -58,9 +60,11 @@ public class EnemySpawner : MonoBehaviour
     public void NextWave()
     {
         waveNumber++;
-        numberOfEnemiesSpawned += 2;
+        numberOfEnemiesSpawned += 10;
         enemiesKilled = 0;
-        
+
+        FindObjectOfType<EnemiesAlive>().enemiesAlive = numberOfEnemiesSpawned;
+
         for (int i = 0; i < numberOfEnemiesSpawned; i++)
         {
             SpawnEnemy();
